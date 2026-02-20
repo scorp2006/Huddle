@@ -19,10 +19,13 @@
 
 # production
 /build
+/dist
 
 # misc
 .DS_Store
 *.pem
+.idea
+.vscode
 
 # debug
 npm-debug.log*
@@ -30,8 +33,12 @@ yarn-debug.log*
 yarn-error.log*
 .pnpm-debug.log*
 
-# env files (can opt-in for committing if needed)
-.env*
+# environment variables - NEVER COMMIT THESE!
+.env
+.env*.local
+.env.development
+.env.production
+.env.test
 
 # vercel
 .vercel
@@ -39,3 +46,11 @@ yarn-error.log*
 # typescript
 *.tsbuildinfo
 next-env.d.ts
+
+# supabase (if running locally)
+.supabase
+
+# temporary files
+*.tmp
+*.temp
+.cache
