@@ -18,28 +18,32 @@ export default function PrivacyPage() {
             <h2 className="text-2xl font-bold text-[#F5F5F7] mb-4">2. Information We Collect</h2>
 
             <h3 className="text-xl font-semibold text-[#F5F5F7] mt-4 mb-2">2.1 Information from LinkedIn OAuth</h3>
-            <p className="mb-2">When you sign in with LinkedIn using OpenID Connect, we collect ONLY:</p>
+            <p className="mb-2">When you sign in with LinkedIn, we receive from LinkedIn ONLY:</p>
             <ul className="list-disc list-inside space-y-1 ml-4">
               <li>Your full name</li>
               <li>Email address</li>
-              <li>LinkedIn unique user ID (for authentication)</li>
             </ul>
             <p className="mt-2 text-sm italic">
-              Note: We do NOT receive your LinkedIn profile picture, connections list, work history,
-              or any other LinkedIn data. We ONLY use LinkedIn for secure authentication.
+              Note: LinkedIn does NOT provide us your profile picture, connections, work history, posts, or any other data.
+              We ONLY use LinkedIn to verify your identity during sign-in.
             </p>
 
-            <h3 className="text-xl font-semibold text-[#F5F5F7] mt-4 mb-2">2.2 Information You Must Provide</h3>
-            <p className="mb-2">During onboarding, you must provide:</p>
+            <h3 className="text-xl font-semibold text-[#F5F5F7] mt-4 mb-2">2.2 Information You Provide (Required)</h3>
+            <p className="mb-2">During onboarding, you MUST provide:</p>
             <ul className="list-disc list-inside space-y-1 ml-4">
-              <li>Your LinkedIn username (e.g., "john-doe") - manually entered by you</li>
-              <li>A one-liner bio describing yourself</li>
+              <li>Your LinkedIn username (e.g., "john-doe") - manually typed by you</li>
+              <li>A profile photo (uploaded by you, NOT from LinkedIn)</li>
+              <li>A short bio/one-liner describing yourself</li>
             </ul>
 
-            <h3 className="text-xl font-semibold text-[#F5F5F7] mt-4 mb-2">2.3 Optional Information</h3>
-            <p className="mb-2">You may optionally provide:</p>
+            <h3 className="text-xl font-semibold text-[#F5F5F7] mt-4 mb-2">2.3 Optional Information You Can Provide</h3>
+            <p className="mb-2">You may optionally add:</p>
             <ul className="list-disc list-inside space-y-1 ml-4">
-              <li>Links to other social profiles (Twitter, Instagram, GitHub, personal website)</li>
+              <li>Twitter username/profile link</li>
+              <li>Instagram username/profile link</li>
+              <li>GitHub username/profile link</li>
+              <li>Personal website URL</li>
+              <li>Tags or interests (planned for future updates)</li>
             </ul>
 
             <h3 className="text-xl font-semibold text-[#F5F5F7] mt-4 mb-2">2.4 Usage Analytics</h3>
@@ -59,22 +63,34 @@ export default function PrivacyPage() {
             <h2 className="text-2xl font-bold text-[#F5F5F7] mb-4">3. How We Use Your Information</h2>
             <p className="mb-2">We use your information to:</p>
             <ul className="list-disc list-inside space-y-1 ml-4">
-              <li>Create and manage your account</li>
-              <li>Display your profile to other event attendees in rooms you join</li>
-              <li>Enable networking connections between event attendees</li>
-              <li>Send important service updates (account, security)</li>
-              <li>Improve our service and user experience</li>
+              <li>Create and manage your account using LinkedIn authentication</li>
+              <li>Display your complete profile (photo, name, bio, LinkedIn link, social links) to other attendees in event rooms you join</li>
+              <li>Enable networking by providing clickable links to your LinkedIn and other social profiles</li>
+              <li>Show you analytics on who viewed your profile (clicks on your LinkedIn link)</li>
+              <li>Send important service updates via email (account changes, security alerts)</li>
+              <li>Improve our service and user experience based on usage patterns</li>
               <li>Prevent fraud and ensure platform security</li>
             </ul>
+            <p className="mt-2 text-sm">
+              We do NOT send marketing emails, sell your data, or use your information for advertising.
+            </p>
           </section>
 
           <section>
             <h2 className="text-2xl font-bold text-[#F5F5F7] mb-4">4. Information Sharing</h2>
 
-            <h3 className="text-xl font-semibold text-[#F5F5F7] mt-4 mb-2">4.1 Within Event Rooms</h3>
-            <p>
-              When you join an event room, your profile (name, photo, bio, LinkedIn URL, and optional social links)
-              is visible to other members of that room. This is the core purpose of our platform.
+            <h3 className="text-xl font-semibold text-[#F5F5F7] mt-4 mb-2">4.1 What Other Users See in Event Rooms</h3>
+            <p className="mb-2">When you join an event room, OTHER MEMBERS in that room can see:</p>
+            <ul className="list-disc list-inside space-y-1 ml-4">
+              <li>Your full name (from LinkedIn)</li>
+              <li>Your profile photo (uploaded by you)</li>
+              <li>Your bio/one-liner (written by you)</li>
+              <li>A clickable link to your LinkedIn profile (using your username)</li>
+              <li>Any optional social links you added (Twitter, Instagram, GitHub, website)</li>
+            </ul>
+            <p className="mt-2">
+              This visibility is the <strong>core purpose of our platform</strong> - to help event attendees
+              discover and connect with each other. All data shown is what YOU chose to provide.
             </p>
 
             <h3 className="text-xl font-semibold text-[#F5F5F7] mt-4 mb-2">4.2 We Do NOT Share With Third Parties</h3>
@@ -112,26 +128,38 @@ export default function PrivacyPage() {
           </section>
 
           <section>
-            <h2 className="text-2xl font-bold text-[#F5F5F7] mb-4">6. Your Rights</h2>
-            <p className="mb-2">You have the right to:</p>
+            <h2 className="text-2xl font-bold text-[#F5F5F7] mb-4">6. Your Rights and Control</h2>
+            <p className="mb-2">You have complete control over your data and the right to:</p>
             <ul className="list-disc list-inside space-y-1 ml-4">
-              <li>Access your personal data</li>
-              <li>Update or correct your information (via Profile page)</li>
-              <li>Delete your account and all associated data</li>
-              <li>Leave any event room</li>
-              <li>Object to data processing</li>
-              <li>Export your data</li>
+              <li>Access all your personal data stored on our platform</li>
+              <li>Update your photo, bio, and social links anytime via your Profile page</li>
+              <li>Remove optional social links at any time</li>
+              <li>Leave any event room (your profile will no longer be visible in that room)</li>
+              <li>Delete your account and ALL associated data permanently</li>
+              <li>Object to data processing or request data export</li>
+              <li>See who clicked your LinkedIn profile link (analytics visible to you)</li>
             </ul>
             <p className="mt-4">
-              To exercise these rights, contact us at: <span className="text-[#FF6B35]">privacy@huddle.app</span> (or your domain email)
+              To exercise these rights or for data-related questions, contact us at: <span className="text-[#FF6B35]">ayyagariabhinav21@gmail.com</span>
             </p>
           </section>
 
           <section>
             <h2 className="text-2xl font-bold text-[#F5F5F7] mb-4">7. Data Retention</h2>
-            <p>
+            <p className="mb-2">
               We retain your data as long as your account is active. When you delete your account,
-              we delete your personal information within 30 days, except where we must retain it for legal compliance.
+              we permanently delete within 30 days:
+            </p>
+            <ul className="list-disc list-inside space-y-1 ml-4">
+              <li>Your profile photo</li>
+              <li>Your bio and all social media links</li>
+              <li>Your email address and LinkedIn username</li>
+              <li>All event room memberships</li>
+              <li>All analytics data (profile click tracking)</li>
+            </ul>
+            <p className="mt-2 text-sm">
+              Exception: We may retain limited data (email, timestamps) for legal compliance, fraud prevention,
+              or if required by law. This data is anonymized where possible.
             </p>
           </section>
 
@@ -162,18 +190,22 @@ export default function PrivacyPage() {
           <section>
             <h2 className="text-2xl font-bold text-[#F5F5F7] mb-4">11. Your Consent</h2>
             <p className="mb-2">
-              By signing in with LinkedIn and creating an account on Huddle, you explicitly consent to:
+              By signing in with LinkedIn and completing onboarding, you explicitly consent to:
             </p>
             <ul className="list-disc list-inside space-y-1 ml-4">
-              <li>The collection and use of your information as described in this Privacy Policy</li>
-              <li>Your profile being visible to other members in event rooms you join</li>
-              <li>Event organizers seeing your name, email, and LinkedIn username for approval purposes</li>
-              <li>Other users being able to click through to your public LinkedIn profile</li>
-              <li>Analytics tracking of profile interactions within the platform</li>
+              <li>LinkedIn providing us your name and email for authentication</li>
+              <li>Your complete profile (photo, name, bio, LinkedIn link, and all social links you add) being visible to other members in event rooms you join</li>
+              <li>Event organizers seeing your name, email, and LinkedIn username when reviewing membership requests</li>
+              <li>Other users clicking your LinkedIn profile link to connect with you on LinkedIn</li>
+              <li>Analytics tracking of when users click your profile links (we track clicks, not what they do after clicking)</li>
             </ul>
             <p className="mt-4">
-              You can withdraw consent at any time by deleting your account, which will remove all your
-              data from our platform within 30 days.
+              <strong>You control what you share:</strong> You choose what photo to upload, what bio to write,
+              and which social links to add. You can update or remove this information anytime in your Profile settings.
+            </p>
+            <p className="mt-2">
+              You can withdraw consent at any time by deleting your account, which will permanently remove
+              all your data from our platform within 30 days.
             </p>
           </section>
 
