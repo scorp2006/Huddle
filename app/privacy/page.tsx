@@ -17,30 +17,42 @@ export default function PrivacyPage() {
           <section>
             <h2 className="text-2xl font-bold text-[#F5F5F7] mb-4">2. Information We Collect</h2>
 
-            <h3 className="text-xl font-semibold text-[#F5F5F7] mt-4 mb-2">2.1 Information from LinkedIn</h3>
-            <p className="mb-2">When you sign in with LinkedIn, we collect:</p>
+            <h3 className="text-xl font-semibold text-[#F5F5F7] mt-4 mb-2">2.1 Information from LinkedIn OAuth</h3>
+            <p className="mb-2">When you sign in with LinkedIn using OpenID Connect, we collect ONLY:</p>
             <ul className="list-disc list-inside space-y-1 ml-4">
-              <li>Your name</li>
+              <li>Your full name</li>
               <li>Email address</li>
-              <li>Profile picture</li>
-              <li>LinkedIn profile URL/username</li>
+              <li>LinkedIn unique user ID (for authentication)</li>
+            </ul>
+            <p className="mt-2 text-sm italic">
+              Note: We do NOT receive your LinkedIn profile picture, connections list, work history,
+              or any other LinkedIn data. We ONLY use LinkedIn for secure authentication.
+            </p>
+
+            <h3 className="text-xl font-semibold text-[#F5F5F7] mt-4 mb-2">2.2 Information You Must Provide</h3>
+            <p className="mb-2">During onboarding, you must provide:</p>
+            <ul className="list-disc list-inside space-y-1 ml-4">
+              <li>Your LinkedIn username (e.g., "john-doe") - manually entered by you</li>
+              <li>A one-liner bio describing yourself</li>
             </ul>
 
-            <h3 className="text-xl font-semibold text-[#F5F5F7] mt-4 mb-2">2.2 Information You Provide</h3>
+            <h3 className="text-xl font-semibold text-[#F5F5F7] mt-4 mb-2">2.3 Optional Information</h3>
             <p className="mb-2">You may optionally provide:</p>
             <ul className="list-disc list-inside space-y-1 ml-4">
-              <li>A one-liner bio</li>
-              <li>Links to other social profiles (Twitter, Instagram, GitHub, website)</li>
-              <li>Custom profile picture</li>
+              <li>Links to other social profiles (Twitter, Instagram, GitHub, personal website)</li>
             </ul>
 
-            <h3 className="text-xl font-semibold text-[#F5F5F7] mt-4 mb-2">2.3 Usage Information</h3>
-            <p className="mb-2">We automatically collect:</p>
+            <h3 className="text-xl font-semibold text-[#F5F5F7] mt-4 mb-2">2.4 Usage Analytics</h3>
+            <p className="mb-2">We automatically collect minimal analytics:</p>
             <ul className="list-disc list-inside space-y-1 ml-4">
-              <li>Event rooms you join</li>
-              <li>LinkedIn profile view clicks (anonymized analytics)</li>
-              <li>Login timestamps</li>
+              <li>Event rooms you join and your approval status</li>
+              <li>LinkedIn profile click tracking (we track WHEN someone clicks your LinkedIn link, NOT what they do on LinkedIn)</li>
+              <li>Login timestamps for security purposes</li>
             </ul>
+            <p className="mt-2 text-sm">
+              This data helps event organizers understand engagement and helps you see which attendees
+              are interested in connecting with you.
+            </p>
           </section>
 
           <section>
@@ -73,10 +85,20 @@ export default function PrivacyPage() {
               <li>With your explicit consent</li>
             </ul>
 
-            <h3 className="text-xl font-semibold text-[#F5F5F7] mt-4 mb-2">4.3 LinkedIn</h3>
-            <p>
-              We do NOT post on your behalf, access your connections, or send messages through LinkedIn.
-              We only use LinkedIn for authentication and to display your public profile information.
+            <h3 className="text-xl font-semibold text-[#F5F5F7] mt-4 mb-2">4.3 What We Do NOT Do With LinkedIn</h3>
+            <p className="mb-2">We explicitly DO NOT:</p>
+            <ul className="list-disc list-inside space-y-1 ml-4">
+              <li>Post on your behalf to LinkedIn</li>
+              <li>Access your LinkedIn connections or network</li>
+              <li>Send messages through LinkedIn</li>
+              <li>Access your work history, education, or endorsements</li>
+              <li>Share your LinkedIn data with third parties</li>
+              <li>Store your LinkedIn password (we use OAuth 2.0)</li>
+            </ul>
+            <p className="mt-2">
+              We ONLY use LinkedIn to verify your identity during sign-in. After authentication,
+              LinkedIn is not involved in any way - we simply display a link to your public LinkedIn
+              profile that other users can click to connect with you directly on LinkedIn.
             </p>
           </section>
 
@@ -138,7 +160,35 @@ export default function PrivacyPage() {
           </section>
 
           <section>
-            <h2 className="text-2xl font-bold text-[#F5F5F7] mb-4">11. Changes to This Policy</h2>
+            <h2 className="text-2xl font-bold text-[#F5F5F7] mb-4">11. Your Consent</h2>
+            <p className="mb-2">
+              By signing in with LinkedIn and creating an account on Huddle, you explicitly consent to:
+            </p>
+            <ul className="list-disc list-inside space-y-1 ml-4">
+              <li>The collection and use of your information as described in this Privacy Policy</li>
+              <li>Your profile being visible to other members in event rooms you join</li>
+              <li>Event organizers seeing your name, email, and LinkedIn username for approval purposes</li>
+              <li>Other users being able to click through to your public LinkedIn profile</li>
+              <li>Analytics tracking of profile interactions within the platform</li>
+            </ul>
+            <p className="mt-4">
+              You can withdraw consent at any time by deleting your account, which will remove all your
+              data from our platform within 30 days.
+            </p>
+          </section>
+
+          <section>
+            <h2 className="text-2xl font-bold text-[#F5F5F7] mb-4">12. Legal Basis for Processing (GDPR)</h2>
+            <p className="mb-2">For users in the EU/EEA, we process your data based on:</p>
+            <ul className="list-disc list-inside space-y-1 ml-4">
+              <li><strong>Consent:</strong> You explicitly agree when signing in and joining event rooms</li>
+              <li><strong>Contract Performance:</strong> Processing necessary to provide our networking service</li>
+              <li><strong>Legitimate Interest:</strong> Platform security, fraud prevention, and service improvement</li>
+            </ul>
+          </section>
+
+          <section>
+            <h2 className="text-2xl font-bold text-[#F5F5F7] mb-4">13. Changes to This Policy</h2>
             <p>
               We may update this Privacy Policy. We will notify you of significant changes via email
               or a notice on our platform. Continued use after changes constitutes acceptance.
@@ -146,7 +196,7 @@ export default function PrivacyPage() {
           </section>
 
           <section>
-            <h2 className="text-2xl font-bold text-[#F5F5F7] mb-4">12. Contact Us</h2>
+            <h2 className="text-2xl font-bold text-[#F5F5F7] mb-4">14. Contact Us</h2>
             <p className="mb-2">For privacy questions or concerns, contact us at:</p>
             <p className="text-[#F5F5F7]">
               Email: <span className="text-[#FF6B35]">ayyagariabhinav21@gmail.com</span>
