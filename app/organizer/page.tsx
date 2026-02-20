@@ -96,7 +96,7 @@ export default function EventOrganizerDashboard() {
 
       if (error) throw error;
 
-      const orgs = orgData?.map(item => item.organizations).filter(Boolean) || [];
+      const orgs: Organization[] = (orgData?.map(item => item.organizations).filter(Boolean) as Organization[]) || [];
       setOrganizations(orgs);
 
       if (orgs.length > 0) {
