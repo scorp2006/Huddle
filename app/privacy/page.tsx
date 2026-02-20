@@ -18,21 +18,22 @@ export default function PrivacyPage() {
             <h2 className="text-2xl font-bold text-[#F5F5F7] mb-4">2. Information We Collect</h2>
 
             <h3 className="text-xl font-semibold text-[#F5F5F7] mt-4 mb-2">2.1 Information from LinkedIn OAuth</h3>
-            <p className="mb-2">When you sign in with LinkedIn, we receive from LinkedIn ONLY:</p>
+            <p className="mb-2">When you sign in with LinkedIn, we receive from LinkedIn:</p>
             <ul className="list-disc list-inside space-y-1 ml-4">
               <li>Your full name</li>
               <li>Email address</li>
+              <li>LinkedIn profile username/URL (if provided by LinkedIn)</li>
             </ul>
             <p className="mt-2 text-sm italic">
               Note: LinkedIn does NOT provide us your profile picture, connections, work history, posts, or any other data.
-              We ONLY use LinkedIn to verify your identity during sign-in.
+              We ONLY use LinkedIn to verify your identity and auto-fill your LinkedIn username to speed up onboarding.
             </p>
 
             <h3 className="text-xl font-semibold text-[#F5F5F7] mt-4 mb-2">2.2 Information You Provide (Required)</h3>
             <p className="mb-2">During onboarding, you MUST provide:</p>
             <ul className="list-disc list-inside space-y-1 ml-4">
-              <li>Your LinkedIn username (e.g., "john-doe") - manually typed by you</li>
-              <li>A profile photo (uploaded by you, NOT from LinkedIn)</li>
+              <li>Your LinkedIn username (auto-filled from LinkedIn if available, otherwise you type it)</li>
+              <li>A profile photo (uploaded by you - LinkedIn doesn't provide photos)</li>
               <li>A short bio/one-liner describing yourself</li>
             </ul>
 
