@@ -298,7 +298,7 @@ function RoomCard({ room, orgSlug }: { room: Room; orgSlug: string }) {
         <div className="flex items-center gap-2 text-[#A0A0A8]">
           <Users className="w-4 h-4" />
           <span>{room.approved_count} members</span>
-          {room.pending_count > 0 && (
+          {(room.pending_count ?? 0) > 0 && (
             <span className="px-2 py-0.5 bg-[#FF6B35]/10 text-[#FF6B35] text-xs rounded">
               {room.pending_count} pending
             </span>

@@ -1,7 +1,7 @@
 "use client";
 
 import { createClient } from '@/lib/supabase/client';
-import { useState, useEffect } from 'react';
+import { useState, useEffect, Suspense } from 'react';
 import { useRouter, useSearchParams } from 'next/navigation';
 import { ArrowLeft, Plus, X, Loader2, Check, Info } from 'lucide-react';
 
@@ -12,7 +12,7 @@ interface Classification {
   display_order: number;
 }
 
-export default function CreateRoomPage() {
+function CreateRoomForm() {
   const [isSubmitting, setIsSubmitting] = useState(false);
   const [error, setError] = useState('');
   const [formData, setFormData] = useState({
@@ -314,5 +314,17 @@ export default function CreateRoomPage() {
         </div>
       </form>
     </main>
+  );
+}
+
+export default function CreateRoomPage() {
+  return (
+    <Suspense fallback={
+      <main className="min-h-screen flex items-center justify-center bg-[#0A0A0B]">
+        <Loader2 className="w-8 h-8 text-[#FF6B35] animate-spin" />
+      </main>
+    }>
+      <CreateRoomForm />
+    </Suspense>
   );
 }
